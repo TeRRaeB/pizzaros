@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages/index');
+})->name('index');
+Route::get('/pages/products', function () {
+    return view('pages/products');
+})->name('products');
