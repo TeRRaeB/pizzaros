@@ -1,3 +1,4 @@
+
 @extends('layout')
 
 @section('body-classes','left-sidebar list-view columns-2 archive woocommerce-page lite')
