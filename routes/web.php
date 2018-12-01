@@ -43,3 +43,8 @@ Route::get('pages/cart', function () {
 Route::get('pages/terms-and-conditions', function () {
     return view('pages/terms-and-conditions');
 })->name('terms-and-conditions');
+Route::post('pages/subscribe', function (\Illuminate\Http\Request $request) {
+
+    $request->input('email');
+    return view('pages/subscribe');
+})->name('subscribe');
