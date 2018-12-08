@@ -14,9 +14,7 @@
 Route::get('/', function () {
     return view('pages/index');
 })->name('index');
-Route::get('pages/products', function () {
-    return view('pages/products');
-})->name('products');
+Route::get('pages/products', '\\' . \App\Http\Controllers\ProductsAction::class)->name('products');
 Route::get('pages/about', function () {
     return view('pages/about');
 })->name('about');

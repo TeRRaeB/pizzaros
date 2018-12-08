@@ -64,25 +64,27 @@
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" >
                     <ul class="products">
+                        @foreach($products as $product)
                         <li class="product first">
                             <div class="product-outer">
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p1.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
+                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="{{ $product->image }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
                                     </div>
                                     <div class="product-content-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Pepperoni Pizza</h3>
+                                            <h3>{{ $product->name }}</h3>
                                             <div itemprop="description">
-                                                <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella cheese, onions, mushrooms, green olives, black olives, fresh tomatoes.</p>
+                                                <p style="max-height: none;">{{ $product->description }}</p>
                                             </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
+                                            {{--@foreach($product->$items as $item)--}}
+                                            {{--<div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">--}}
+                                                    {{--<h3><span>Pick Size</span></h3>--}}
+                                                    {{--<div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }} {{ $item->dimension }} </span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>--}}
+                                                    {{--<div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }}  {{ $item->dimension }} </span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>--}}
+                                                {{--</div>--}}
+
+                                                {{--@endforeach--}}
                                         </a>
                                         <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
                                     </div>
@@ -91,199 +93,8 @@
                             </div>
                             <!-- /.product-outer -->
                         </li>
-                        <li class="product pa_food-type-veg last">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p4.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Trio Cheese</h3>
-                                            <span class="food-type-icon"><i class="po po-veggie-icon"></i></span>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Mouth watering pepperoni, cabanossi, mushroom, capsicum, black olives and stretchy mozzarella,</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product pa_food-type-meat first">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p5.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Apricot Chicken</h3>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product last">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p6.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Italiano Original</h3>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product pa_food-type-meat first">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p7.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Chicken Hawaii</h3>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Extra-virgin olive oil, mozzarella cheese, thinly-sliced steak meat, garlic, green peppers, mushrooms and tomatoes</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product last">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p8.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Summer Pizza</h3>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Shrimp, Red Capsicum, Green Capsicum, Onion, Chilli flakes, Lemon Pepper, Mozzarella, finished with Aioli</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product pa_food-type-veg first">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p9.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Pepperoni Calzone</h3>
-                                            <span class="food-type-icon">
-                                       <i class="po po-veggie-icon"></i>            </span>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Piled with shrimp, calamari, clams, mussels, surimi and stretchy mozzarella, seasoned with tangy lemon pepper.</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                        <li class="product last">
-                            <div class="product-outer">
-                                <div class="product-inner">
-                                    <div class="product-image-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="assets/images/products/p10.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="13" title="13"></a>
-                                    </div>
-                                    <div class="product-content-wrapper">
-                                        <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <h3>Primo Meat</h3>
-                                            <div itemprop="description">
-                                                <p style="max-height: none;">Mouth watering pepperoni, cabanossi, mushroom, capsicum, black olives and stretchy mozzarella,</p>
-                                            </div>
-                                            <div  class="yith_wapo_groups_container">
-                                                <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
-                                                    <h3><span>Pick Size</span></h3>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19.90</span></span></div>
-                                                    <div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29  cm</span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></span></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
-                                    </div>
-                                </div>
-                                <!-- /.product-inner -->
-                            </div>
-                            <!-- /.product-outer -->
-                        </li>
-                    </ul>
+                            @endforeach
+
                     <nav class="woocommerce-pagination">
                         <ul class="page-numbers">
                             <li><span class="page-numbers current">1</span></li>
