@@ -15,7 +15,7 @@
                     <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
                     <div class="primary-navigation">
                         <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
-                            <li class="menu-item"><a href="{{route ('products')}}">Order Online</a></li>
+                            <li class="menu-item"><a href="{{route('cart')}}">Order Online</a></li>
                             <li class="yamm-fw menu-item menu-item-has-children">
                             <li class="menu-item"><a href="{{route ('blog')}}">News</a></li>
                             <li class="menu-item"><a href="{{ route ('about') }}">About</a></li>
@@ -39,13 +39,13 @@
                     </div>
                     <ul class="site-header-cart-v2 menu">
                         <li class="cart-content ">
-                            <a href="{{route ('cart')}}" title="View your shopping cart">
+                            <a href="{{route('cart')}}" title="View your shopping cart">
                                 <i class="po po-scooter"></i>
                                 <span>Go to Your Cart</span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="{{route ('cart')}}" title="View your shopping cart">
+                                    <a href="{{route('cart')}}" title="View your shopping cart">
                                         <span class="count">2 items</span> <span class="amount">$50.00</span>
                                     </a>
                                 </li>
@@ -54,17 +54,14 @@
                     </ul>
                 </div>
             </div>
+            @inject('menus', '\App\Serivces\GetItemForMenuService')
             <div class="pizzaro-secondary-navigation">
                 <nav class="secondary-navigation"  aria-label="Secondary Navigation">
                     <ul  class="menu">
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-pizza"></i>Pizza</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-burger"></i>Burgers</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-salads"></i>Salads</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-tacos"></i>Tacos</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-wraps"></i>Wraps</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-fries"></i>Fries</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-salads"></i>Salads</a></li>
-                        <li class="menu-item"><a href="{{ route('products') }}"><i class="po po-drinks"></i>Drinks</a></li>
+                        @foreach($menus->getmenus() as $menu)
+                            <li class="menu-item"><a href="{{ route('products', $menu->key) }}"><i class="po {{$menu->icon}}"> </i> {{$menu->name}}</a></li>
+
+                        @endforeach
                     </ul>
                 </nav>
                 <!-- #secondary-navigation -->

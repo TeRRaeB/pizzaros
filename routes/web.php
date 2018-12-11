@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('pages/index');
 })->name('index');
-Route::get('pages/products', '\\' . \App\Http\Controllers\ProductsAction::class)->name('products');
+Route::get('pages/products/{key}', '\\' . \App\Http\Controllers\ProductsAction::class)->name('products');
 Route::get('pages/about', function () {
     return view('pages/about');
 })->name('about');
@@ -35,12 +35,14 @@ Route::get('pages/contacts', function () {
 Route::get('pages/faq', function () {
     return view('pages/faq');
 })->name('faq');
-Route::get('pages/cart', function () {
-    return view('pages/cart');
-})->name('cart');
+
+Route::get('pages/cart/add/{id}', '\\' . \App\Http\Controllers\AddToCartAction::class)->name('add-to-cart');
+Route::get('pages/cart', '\\' . \App\Http\Controllers\ShowCartAction::class)->name('cart');
+
 Route::get('pages/terms-and-conditions', function () {
     return view('pages/terms-and-conditions');
 })->name('terms-and-conditions');
+
 Route::post('pages/subscribe', function (\Illuminate\Http\Request $request) {
 
     $request->input('email');

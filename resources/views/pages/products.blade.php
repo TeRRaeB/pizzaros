@@ -4,6 +4,8 @@
 @section('body-classes','left-sidebar list-view columns-2 archive woocommerce-page lite')
 
 @section('content')
+
+
     <div id="content" class="site-content" tabindex="-1">
         <div class="col-full">
             <div class="pizzaro-sorting">
@@ -65,7 +67,7 @@
                 <main id="main" class="site-main" >
                     <ul class="products">
                         @foreach($products as $product)
-                        <li class="product first">
+                        <li class="product ">
                             <div class="product-outer">
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
@@ -77,32 +79,28 @@
                                             <div itemprop="description">
                                                 <p style="max-height: none;">{{ $product->description }}</p>
                                             </div>
-                                            {{--@foreach($product->$items as $item)--}}
-                                            {{--<div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">--}}
-                                                    {{--<h3><span>Pick Size</span></h3>--}}
-                                                    {{--<div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }} {{ $item->dimension }} </span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>--}}
-                                                    {{--<div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }}  {{ $item->dimension }} </span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>--}}
-                                                {{--</div>--}}
+                                            <div  class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                <h3><span>Pick Size</span></h3>
+                                            @foreach($product->items as $item)
+            <a href="{{route('add-to-cart', $item->id)}}">
+                                                    <div class="ywapo_input_container ywapo_input_container_radio" ><span class="ywapo_label_tag_position_after">
+                                                            <span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }} {{ $item->dimension }} </span></span>
+                                                        <span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>
+            </a>                                                 {{--<div class="ywapo_input_container ywapo_input_container_radio"><span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">{{ $item->size }}  {{ $item->dimension }} </span></span><span class="ywapo_label_price"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</span></span></div>--}}
+                                                @endforeach
+                                                </div>
 
-                                                {{--@endforeach--}}
+
                                         </a>
                                         <div class="hover-area"><a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="82" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a></div>
                                     </div>
                                 </div>
-                                <!-- /.product-inner -->
-                            </div>
+                                <!-- /.product-inner --></div>
                             <!-- /.product-outer -->
-                        </li>
-                            @endforeach
+                        </li>  @endforeach
+                    </ul>
 
-                    <nav class="woocommerce-pagination">
-                        <ul class="page-numbers">
-                            <li><span class="page-numbers current">1</span></li>
-                            <li><a class="page-numbers" href="#">2</a></li>
-                            <li><a class="page-numbers" href="#">3</a></li>
-                            <li><a class="next page-numbers" href="#">Next Page &nbsp;&nbsp;&nbsp;→</a></li>
-                        </ul>
-                    </nav>
+
                 </main>
                 <!-- #main -->
             </div>

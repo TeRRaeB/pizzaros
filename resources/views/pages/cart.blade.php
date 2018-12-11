@@ -82,44 +82,7 @@
                                                 <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>25.90</span>
                                             </td>
                                         </tr>
-                                        <tr class="cart_item">
-                                            <td class="product-remove">
-                                                <a href="#" class="remove">&times;</a>
-                                            </td>
-                                            <td class="product-thumbnail">
-                                                <a href="single-product-v1.html">
-                                                    <img width="180" height="180" src="assets/images/products/2.jpg" alt="" />
-                                                </a>
-                                            </td>
-                                            <td class="product-name" data-title="Product">
-                                                <a href="single-product-v1.html">Pepperoni Pizza</a>
-                                                <dl class="variation">
-                                                    <dt class="variation-Baseprice">Base price:</dt>
-                                                    <dd class="variation-Baseprice">
-                                                        <p><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>0.00</span></p>
-                                                    </dd>
-                                                    <dt class="variation-PickSizespanclasswoocommerce-Price-amountamountspanclasswoocommerce-Price-currencySymbol36span2590span">Pick Size ( <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>25.90</span> ):
-                                                    </dt>
-                                                    <dd class="variation-PickSizespanclasswoocommerce-Price-amountamountspanclasswoocommerce-Price-currencySymbol36span2590span">
-                                                        <p>29  cm</p>
-                                                    </dd>
-                                                </dl>
-                                            </td>
-                                            <td class="product-price" data-title="Price">
-                                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>25.90</span>
-                                            </td>
-                                            <td class="product-quantity" data-title="Quantity">
-                                                <div class="qty-btn">
-                                                    <label>Quantity</label>
-                                                    <div class="quantity">
-                                                        <input type="number"  value="1" title="Qty" class="input-text qty text" size="4" />
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="product-subtotal" data-title="Total">
-                                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>25.90</span>
-                                            </td>
-                                        </tr>
+
                                         <tr>
                                             <td colspan="6" class="actions">
                                                 <div class="coupon">
